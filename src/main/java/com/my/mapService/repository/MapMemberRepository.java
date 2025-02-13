@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-@Repository
+//@Repository
 public class MapMemberRepository implements MemberRepository{
     //    전체 맴버를 저장할 맵을 선언
     public static Map<Long, Member> store = new HashMap<>();
@@ -39,6 +39,7 @@ public class MapMemberRepository implements MemberRepository{
                 .values()
                 .stream()
                 .filter(x -> x.getName().equals(name))
+
                 .findAny();
         //findany : 하나라도 있으면 값을 찾아주고, 없으면 null로 반환
         return result;

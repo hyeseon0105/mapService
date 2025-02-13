@@ -1,8 +1,7 @@
-package com.my.mapService.service.Member;
+package com.my.mapService.service;
 
 import com.my.mapService.dto.Member;
 import com.my.mapService.repository.MapMemberRepository;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -11,7 +10,6 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
     MapMemberRepository repository = new MapMemberRepository();

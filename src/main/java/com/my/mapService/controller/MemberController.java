@@ -9,15 +9,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/members")
 public class MemberController {
+//    신규회원가입하기 창보이기
     @GetMapping("")
     public String list() {
         return "/members/memberList";
     }
 
     @GetMapping("/new")
+//    신규회원
     public String newMembers() {
         return "/members/createMemberForm";
     }
+
     @PostMapping ("/new")
     public String createMember(Member member) {
 //        1.회원가입 창에서 보낸 자료를 memberdto로 받는다
